@@ -415,7 +415,7 @@ def BuildRacerd():
     sys.exit( 'cargo is required for the rust completer' )
 
   os.chdir( p.join( DIR_OF_THIRD_PARTY, 'racerd' ) )
-  args = [ 'cargo', 'build' '--verbose' ]
+  args = [ 'cargo', 'build', '--verbose' ]
   # We don't use the --release flag on Travis/AppVeyor because it makes building
   # racerd 2.5x slower and we don't care about the speed of the produced racerd.
   if not OnTravisOrAppVeyor():
